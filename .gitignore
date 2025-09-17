@@ -1,0 +1,29 @@
+# Carpetas de Unity que no deben ir al repo
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+
+# Archivos de Visual Studio y otros IDE
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Otros
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
