@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HP : MonoBehaviour
+public class HPEnemigo : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth = 100;
@@ -13,18 +13,16 @@ public class HP : MonoBehaviour
         currentHealth = maxHealth;
     }
     
-    public void TakeDamage(int amount)
+    public void TakeDamageE(int amount)
     {
         currentHealth -= amount;
-        Debug.Log($"Daño recibido, vida actual: {currentHealth}");
-
         if (currentHealth <= 0)
         {
-            Die();
+            DieE();
         }
     }
 
-    private void Die()
+    private void DieE()
     {
         Debug.Log("Jugador muerto");
         Destroy(gameObject);
