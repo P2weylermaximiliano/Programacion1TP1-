@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class MovimientoEnemigo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public float speed = 2f;
+    [SerializeField]
+    List<Vector3> puntos = new List<Vector3>();
+    Vector3 direccion; 
+    private int indiceActual = 0;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (puntos.Count == 0) return;
+
+        Vector3 destino = puntos[indiceActual];
+        direccion = destino - transform.position;
+
+        if (direccion.magnitude > 0.1f)
+        {
+
+            transform.position += direccion.normalized * speed * Time.deltaTime;
+        }
+        else
+        {
+            if (indiceActual < puntos.Count - 1)
+            {
+                indiceActual++;
+            }
+
+        }
     }
+    
 }
