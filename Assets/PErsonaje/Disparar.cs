@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Disparar : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firePoint; 
+    [SerializeField]
+    private GameObject bulletPrefab;
+    [SerializeField]
+    private Transform firePoint; 
 
     void Update()
     {
